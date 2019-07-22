@@ -1,0 +1,32 @@
+
+
+.full_description{
+    display: flex;
+    border: 1px solid black;
+    justify-content: start;
+    padding: 5px;
+    margin: 5px auto;
+    min-width: 330px;
+    max-width: 800px;
+    background: #ffffff73;
+    min-height: max-content;
+    flex-wrap: wrap;
+}
+.comments{
+    display: flex;
+    border: 1px solid black;
+    justify-content: start;
+    padding: 5px;
+    margin: 5px auto;
+    min-width: 330px;
+    max-width: 800px;
+    background: #ffffff73;
+    min-height: max-content;
+    flex-wrap: wrap;
+}
+
+
+.full_description ul li{
+    list-style-type: none;
+}
+

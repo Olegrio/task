@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Иван",
+      "surname": "Иванов",
+      "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+      "text": "",
+      "position":"Менеджер",
+      "id": 0,
+      "adress":"г. Санкт-Петербург, пл. Карла Фаберже, д. 8 литер б "
+    },
+    {
+      "name": "Алексей",
+      "surname": "Семенов",
+      "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+      "text": "",
+      "position":"Менеджер",
+      "id": 1,
+      "adress":"г. Санкт-Петербург, пл. Карла Фаберже, д. 8 литер б "
+    },
+    {
+      "name": "Николай",
+      "surname": "Петров",
+      "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+      "text": "",
+      "position":"Старший мененджер",
+      "id": 2,
+      "adress":"г. Санкт-Петербург, пл. Карла Фаберже, д. 8 литер б "
+    },
+    {
+      "name": "Георгий",
+      "surname": "Савин",
+      "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+      "text": "",
+      "position":"Стажер",
+      "id": 3,
+      "adress":"г. Санкт-Петербург, пл. Карла Фаберже, д. 8 литер б "
+    },
+    {
+      "name": "Анна",
+      "surname": "Смирнова",
+      "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+      "text": "",
+      "position":"HR",
+      "id": 4,
+      "adress":"г. Санкт-Петербург, пл. Карла Фаберже, д. 8 литер б "
+    },
+    {
+      "name": "Марина",
+      "surname": "Тулова",
+      "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+      "text": "",
+      "position":"Менеджер",
+      "id": 5,
+      "adress":"г. Санкт-Петербург, пл. Карла Фаберже, д. 8 литер б "
+    }
+  
+  ]
+  

@@ -1,0 +1,37 @@
+.OneUser{
+    display: flex;
+    border: 1px solid black;
+    justify-content: start;
+    padding: 5px;
+    margin: 5px auto;
+    min-width: 330px;
+    max-width: 800px;
+    background: #ffffff73;
+}
+
+.description_list li{
+    list-style-type: none;
+}
+.description_list{
+margin-top: 15px;
+margin: 5px;
+line-height: 5px;
+
+}
+
+.OneUser_description{
+   
+
+}
+.description_name, .description_surname {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+.description_position{
+    margin-top: 70px
+}
+a{
+    text-decoration: none;
+    color: black
+}

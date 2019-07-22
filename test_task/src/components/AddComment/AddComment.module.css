@@ -1,0 +1,38 @@
+.AddComment{
+    margin-top: 20px;
+    background: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    line-height: 2px;
+   
+}
+.AddComment img{
+    border-radius: 50px;
+
+}
+.textareaTitle{
+    max-width: 350px;
+    height: 26px;
+}
+.textareaText{
+    height: 100px;
+    font-size: 12px;
+    width: 80%;
+    min-width:  300px;
+    overflow-wrap: break-word;
+}
+.textareaPhone{
+    max-width: 200px;
+    height: 26px;
+}
+.item{
+    width: 100%
+}
+.button{
+   
+    flex: none;
+    width: 163px;
+    height: 30px;
+    margin: 10px auto;
+}
