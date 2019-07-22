@@ -3,7 +3,7 @@
 .full_description{
     display: flex;
     border: 1px solid black;
-    justify-content: start;
+    
     padding: 5px;
     margin: 5px auto;
     min-width: 330px;
@@ -15,7 +15,7 @@
 .comments{
     display: flex;
     border: 1px solid black;
-    justify-content: start;
+    
     padding: 5px;
     margin: 5px auto;
     min-width: 330px;

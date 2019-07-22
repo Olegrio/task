@@ -12,7 +12,7 @@ import UserList from './components/UserList/UserList';
 class App extends Component {
   
   componentWillMount(){
-this.arrayRoute = this.props.AppState.USER_PROFILE.map((data,key)=> <Route key={key} path={"/user/"+data.id} component={ () =>  <UserProfilePage id_user ={data.id}  /> }  />);
+this.arrayRoute = this.props.AppState.USER_PROFILE.map((data,key)=> <Route exact key={key} path={"/user/"+data.id} render={ () =>  <UserProfilePage state={this.props.AppState} id_user ={data.id}  /> }  />);
 console.log(this.props.AppState);
   }
 
@@ -23,7 +23,8 @@ console.log(this.props.AppState);
 <div>
 
     
-<Route  path='/users' component={ () => <UserList /> }  />
+<Route exact path='/' component={ () => <UserList /> }  />
+
 {this.arrayRoute}
 
 </div>
