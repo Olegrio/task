@@ -15,6 +15,7 @@ import UserProfilePage from './components/UserProfilePage/UserProfilePage';
 import UserList from './components/UserList/UserList';
 import AddComment from './components/AddComment/AddComment';
 
+import AddUser from './components/AddUser/AddUser';
 
 
 class App extends Component {
@@ -30,8 +31,9 @@ console.log(this.props.AppState);
     return(
 
 <div>
-
+      
   <Route exact path='/' component={ () => <UserList /> }  />
+  <Route exact path='/add' component={ () =><AddUser />}  />
   {this.arrayRoute}
 
 </div>

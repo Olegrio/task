@@ -11,9 +11,6 @@ const Wrapper = styled.div`
     text-align:center;
     width:90%;
     margin: 10px auto 30px auto ;
-   
-    
-    
 `;
 
 const Page = styled.div`
@@ -23,7 +20,7 @@ const Page = styled.div`
 class SlideView extends React.Component {
     constructor (props){
         super(props);
-      this.arrayOneUser = this.props.stateSlideView.map((data, key)=> <Page><OneUser  key={key} state={data} /></Page> )
+      this.arrayOneUser = this.props.stateSlideView.map((data, key)=> <Page key={key}><OneUser  key={key} state={data} /></Page> )
   }
 
 render(){

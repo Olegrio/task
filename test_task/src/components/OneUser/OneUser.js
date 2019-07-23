@@ -21,7 +21,6 @@ class OneUser extends Component{
 componentWillMount(){
  
     
-console.log('OneUserState',this.props.state);
 
 }
 
