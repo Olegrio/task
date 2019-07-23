@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import OneUser from '../OneUser/OneUser';
 import OneComment from '../OneComment/OneComment';
 import AddComment from '../AddComment/AddComment';
-
+import SlideView from '../Carousel/SlideView';
 import  st from './UserProfilePage.module.css';
 
 class UserProfilePage extends Component{
@@ -25,16 +25,16 @@ class UserProfilePage extends Component{
   
      
     }
-    componentWillMount(){
-console.log('this.props.COMMEN',this.props.COMMENT);
-
-    }
+    
    
    
 
     render(){
         return(
             <div className={st.UserProfilePage}>
+            <div className={st.Slider}>
+            <SlideView />
+            </div>
               <OneUser state={this.USER_PROFILE[this.user_id]} />
               <div className={st.full_description} >
                     <ul>
@@ -61,8 +61,7 @@ console.log('this.props.COMMEN',this.props.COMMENT);
 
 export default connect(
     state => ({
-        state: state,
-        COMMENT: state.COMMENT
+       COMMENT: state.COMMENT
    
   }),
     dispatch => ({
