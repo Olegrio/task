@@ -40,7 +40,7 @@ class AddComment extends Component{
     addComment = () => {
       
       this.props.addComment("ADD_NEW_COMMENT",this.props.user_id);
-      console.log(this.props.state);
+      console.log(this.props.NEW_COMMENT_VALUE);
     }
     
    
@@ -81,10 +81,7 @@ export default connect(
         NEW_TITLE_VALUE: state.NEW_TITLE_VALUE,
         NEW_COMMENT_VALUE: state.NEW_COMMENT_VALUE,
         NEW_PHONE_VALUE: state.NEW_PHONE_VALUE,
-        
-       
-       
-       
+     
   }),
     dispatch => ({
       addValue: (type,value) => { 

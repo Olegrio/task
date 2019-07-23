@@ -6,11 +6,21 @@ const NEW_VALUE ={
  "NEW_PHONE_VALUE": ""
 
 }
+const NEW_USER ={
+    "name": "ss",
+    "surname": "",
+    "img": "",
+    "text": "",
+    "position":"",
+    "adress":""
+
+}
 
 const initialState = {
 "USER_PROFILE": USER_PROFILE,
 "COMMENT":COMMENT,
 "NEW_VALUE": NEW_VALUE,
+"NEW_USER":NEW_USER
 
 
 }

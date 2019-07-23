@@ -16,6 +16,8 @@ line-height: 2px;
 }
 
 textarea {
+    font-size: 18px;
+    height: 23px;
     resize:none;
     overflow-wrap: break-word;
 }

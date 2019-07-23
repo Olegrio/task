@@ -33,7 +33,7 @@ console.log(this.props.AppState);
 <div>
       
   <Route exact path='/' component={ () => <UserList /> }  />
-  <Route exact path='/add' component={ () =><AddUser />}  />
+  <Route exact path='/add' component={ () =><AddUser NEW_USER={this.props.AppState.NEW_USER}/>}  />
   {this.arrayRoute}
 
 </div>
