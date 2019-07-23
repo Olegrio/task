@@ -20,13 +20,13 @@ class UserProfilePage extends Component{
     this.USER_PROFILE = this.props.state.USER_PROFILE ;
 
     this.adress = this.props.state.USER_PROFILE[this.user_id].adress;
-    this.array_comment = this.props.state.COMMENT.filter(data=> Number(data.userId) ===this.user_id );
+    this.array_comment = this.props.COMMENT.filter(data=> Number(data.userId) ===this.user_id );
     this.array_comment_component =  this.array_comment.map((data,key)=><OneComment state={data} key={key} /> );
   
      
     }
     componentWillMount(){
-console.log('this.array_comment',this.array_comment);
+console.log('this.props.COMMEN',this.props.COMMENT);
 
     }
    
@@ -38,12 +38,12 @@ console.log('this.array_comment',this.array_comment);
               <OneUser state={this.USER_PROFILE[this.user_id]} />
               <div className={st.full_description} >
                     <ul>
-                        <li><p>{this.adress} </p></li>                       
+                        <li><p>{this.adress} </p></li>                   
                     </ul>
               </div>
               <div className={st.comments} user_id={ this.user_id}>
              {this.array_comment_component}
-              <AddComment state={ this.USER_PROFILE[this.user_id]} />
+              <AddComment NEW_VALUE={this.props.NEW_VALUE} user_id={this.user_id } />
               </div>
               
                     
@@ -57,4 +57,17 @@ console.log('this.array_comment',this.array_comment);
 
 
 
-export default UserProfilePage;
+// export default UserProfilePage;
+
+export default connect(
+    state => ({
+        state: state,
+        COMMENT: state.COMMENT
+   
+  }),
+    dispatch => ({
+      addValue: (type,value) => { 
+          dispatch({type: type, text: value });
+        }
+  })
+    )(UserProfilePage);
