@@ -13,7 +13,7 @@ import {Route} from 'react-router-dom';
 import './App.css';
 import UserProfilePage from './components/UserProfilePage/UserProfilePage';
 import UserList from './components/UserList/UserList';
-import AddComment from './components/AddComment/AddComment';
+
 
 import AddUser from './components/AddUser/AddUser';
 
@@ -32,8 +32,8 @@ console.log(this.props.AppState);
 
 <div>
       
-  <Route exact path='/' component={ () => <UserList /> }  />
-  <Route exact path='/add' component={ () =><AddUser NEW_USER={this.props.AppState.NEW_USER}/>}  />
+ <Route exact path='/' component={ () => <UserList store= {this.props.store}  state={this.props.AppState} NEW_USER={this.props.AppState.NEW_USER} /> }  />
+ <Route exact path='/add' component={ () =><AddUser store= {this.props.store}  state={this.props.AppState} NEW_USER={this.props.AppState.NEW_USER} />}  /> 
   {this.arrayRoute}
 
 </div>

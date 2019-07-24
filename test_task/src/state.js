@@ -7,7 +7,7 @@ const NEW_VALUE ={
 
 }
 const NEW_USER ={
-    "name": "ss",
+    "name": "",
     "surname": "",
     "img": "",
     "text": "",

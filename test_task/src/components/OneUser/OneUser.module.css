@@ -35,3 +35,12 @@ a{
     text-decoration: none;
     color: black
 }
+@media (max-width: 400px) {
+    .description_position{
+        margin-top: 60px
+    }
+    .OneUser p{  
+        line-height: 10px;
+    }
+
+}

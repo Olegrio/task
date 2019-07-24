@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
@@ -21,13 +21,16 @@ let reducer = (state=initialState.initialState,action) => {
       return state ;
       case 'ADD_NEW_COMMENT': 
       let newComment = {
-         "text":  state.NEW_VALUE.NEW_COMMENT_VALUE,
+        "text":  state.NEW_VALUE.NEW_COMMENT_VALUE,
         "userId": action.userId,
-         "title": state.NEW_VALUE.NEW_TITLE_VALUE,
+        "title": state.NEW_VALUE.NEW_TITLE_VALUE,
         "phone": state.NEW_VALUE.NEW_PHONE_VALUE
     }
     state.COMMENT.push(newComment);
-    
+    state.NEW_VALUE.NEW_TITLE_VALUE = '';
+    state.NEW_VALUE.NEW_COMMENT_VALUE = '';
+    state.NEW_VALUE.NEW_PHONE_VALUE = '';
+
        return state ;
        
       case 'ADD_NAME_VALUE':state.NEW_USER.name = action.text;
@@ -40,6 +43,20 @@ let reducer = (state=initialState.initialState,action) => {
       return state ;
       case 'ADD_ADRESS_VALUE':state.NEW_USER.adress = action.text;
       return state ;
+
+      case "ADD_NEW_USER": 
+      let newUser = {
+        "name":  state.NEW_USER.name,
+        "surname": state.NEW_USER.surname,
+        "img": state.NEW_USER.img,
+        "text":"",
+        "position":state.NEW_USER.position,
+        "id": state.USER_PROFILE.length+1,
+        "adress":state.NEW_USER.adress
+    }
+    state.USER_PROFILE.push(newUser);
+
+    return state ;
       
      
    default : return state;
@@ -61,6 +78,7 @@ ReactDOM.render(
 , document.getElementById('root'))
 
 };
+
 renderDom();
 
 

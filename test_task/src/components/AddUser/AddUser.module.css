@@ -21,3 +21,11 @@ textarea {
     resize:none;
     overflow-wrap: break-word;
 }
+button{
+
+    flex: none;
+    width: 163px;
+    height: 30px;
+    margin: 10px auto;
+    cursor: pointer;
+}

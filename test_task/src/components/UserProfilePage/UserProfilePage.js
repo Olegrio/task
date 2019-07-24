@@ -51,7 +51,7 @@ class UserProfilePage extends Component{
               <div className={st.comments} user_id={ this.user_id}>
              {/* {this.array_comment_component} */}
              <div id='comments'></div>
-              <AddComment NEW_VALUE={this.props.NEW_VALUE} user_id={this.user_id } />
+              <AddComment  store= {this.props.store} NEW_VALUE={this.props.NEW_VALUE} user_id={this.user_id } />
               </div>
               
                     
