@@ -3,7 +3,9 @@ const COMMENT = require ('./DATA/COMMENT.json');
 const NEW_VALUE ={
  "NEW_TITLE_VALUE": "",
  "NEW_COMMENT_VALUE": "",
- "NEW_PHONE_VALUE": ""
+ "NEW_PHONE_VALUE": "",
+ "WELL_VALUE": false
+
 
 }
 const NEW_USER ={

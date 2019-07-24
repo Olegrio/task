@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-
+import {NavLink} from 'react-router-dom';
 
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
@@ -31,7 +31,7 @@ console.log(this.props.AppState);
     return(
 
 <div>
-      
+<NavLink className='goHome' to='/'><p >Домой</p> </NavLink> 
  <Route exact path='/' component={ () => <UserList store= {this.props.store}  state={this.props.AppState} NEW_USER={this.props.AppState.NEW_USER} /> }  />
  <Route exact path='/add' component={ () =><AddUser store= {this.props.store}  state={this.props.AppState} NEW_USER={this.props.AppState.NEW_USER} />}  /> 
   {this.arrayRoute}

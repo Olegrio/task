@@ -31,3 +31,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+.goHome{
+ margin:auto;
+ text-align: center;
+ 
+}
+.goHome p {
+  border: 1px solid black;
+  padding: 5px 10px;
+  width: 100px;
+  margin: 5px auto;
+  transition: 1s
+
+}
+.goHome p:hover {
+background: lightblue;
+
+}

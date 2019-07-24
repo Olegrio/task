@@ -63,7 +63,9 @@ class UserProfilePage extends Component{
     componentDidMount(){
         let renderComments = () => {
             this.array_comment = this.props.COMMENT.filter(data=> Number(data.userId) ===this.user_id );
-            this.array_comment_component =  this.array_comment.map((data,key)=><OneComment state={data} key={key} /> );
+            this.array_comment_component =  this.array_comment.map((data,key) => ( this.array_comment.length > 5 ?( key>this.array_comment.length-6 ? <OneComment state={data} key={key} /> : console.log('-el') ): <OneComment state={data} key={key} />) );
+            // this.array_comment.length > 5 ? this.array_comment_component = this.array_comment.splice(0,this.array_comment.length - 5).map((data,key)=><OneComment state={data} key={key} /> ) : this.array_comment_component =  this.array_comment.map((data,key)=><OneComment state={data} key={key} /> ); 
+           
             ReactDOM.render(
                 <div>
 {this.array_comment_component}

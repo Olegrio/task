@@ -12,6 +12,8 @@ import initialState from './state.js'
 
 
 let reducer = (state=initialState.initialState,action) => {
+
+state.NEW_VALUE.NEW_TITLE_VALUE.length > 5 && state.NEW_VALUE.NEW_COMMENT_VALUE !=='' && state.NEW_VALUE.NEW_PHONE_VALUE !=='' ? state.NEW_VALUE.WELL_VALUE = true: state.NEW_VALUE.WELL_VALUE = false ;
     switch(action.type){
       case 'ADD_TITLE_VALUE':state.NEW_VALUE.NEW_TITLE_VALUE = action.text;
       return state ;
@@ -20,7 +22,7 @@ let reducer = (state=initialState.initialState,action) => {
       case 'ADD_PHONE_VALUE':state.NEW_VALUE.NEW_PHONE_VALUE = action.text;
       return state ;
       case 'ADD_NEW_COMMENT': 
-      let newComment = {
+      if(state.NEW_VALUE.NEW_TITLE_VALUE.length > 5 && state.NEW_VALUE.NEW_COMMENT_VALUE !=='' && state.NEW_VALUE.NEW_PHONE_VALUE !=='' ){  let newComment = {
         "text":  state.NEW_VALUE.NEW_COMMENT_VALUE,
         "userId": action.userId,
         "title": state.NEW_VALUE.NEW_TITLE_VALUE,
@@ -29,7 +31,7 @@ let reducer = (state=initialState.initialState,action) => {
     state.COMMENT.push(newComment);
     state.NEW_VALUE.NEW_TITLE_VALUE = '';
     state.NEW_VALUE.NEW_COMMENT_VALUE = '';
-    state.NEW_VALUE.NEW_PHONE_VALUE = '';
+    state.NEW_VALUE.NEW_PHONE_VALUE = '';} else { console.log('заполните поля')}
 
        return state ;
        

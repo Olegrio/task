@@ -24,21 +24,25 @@ class AddComment extends Component{
 
   
     onTitleValue = (e) => {
-      let newTitleElem =e.target.value;   
-      this.props.addValue("ADD_TITLE_VALUE",newTitleElem);
+      let newTitleElem =e.target.value;
+      // console.log(e);
+      // console.log(e.nativeEvent);   
+     
+      this.props.NEW_VALUE.NEW_TITLE_VALUE.length < 80 || e.nativeEvent.data === null ?  this.props.addValue("ADD_TITLE_VALUE",newTitleElem):  console.log('В поле заголовок от 5 до 80 символов ') ;
      
      }
 
      onCommentValue = (e) => {
       let newCommentElem =e.target.value;   
-      this.props.addValue("ADD_COMMENT_VALUE",newCommentElem);
+      this.props.NEW_VALUE.NEW_COMMENT_VALUE.length < 128 || e.nativeEvent.data === null ? this.props.addValue("ADD_COMMENT_VALUE",newCommentElem): console.log('В поле комментарий не более 128 символов ') ;
+
      }
 
      onPhoneValue = (e) => {
       const re = /^[0-9\b]+$/;
       let newPhoneElem =e.target.value;   
 
-      re.test(e.target.value) ? this.props.addValue("ADD_PHONE_VALUE",newPhoneElem) : console.log('не число') ;
+     (( re.test(e.target.value) && this.props.NEW_VALUE.NEW_PHONE_VALUE.length <11 ) || e.nativeEvent.data === null ) ? this.props.addValue("ADD_PHONE_VALUE",newPhoneElem) : console.log('В поле телефон только цифры ') ;
       
       
      }
@@ -87,8 +91,13 @@ class AddComment extends Component{
     }
     
     componentDidMount(){
+      let status = () => {
+        
+        this.props.NEW_VALUE.WELL_VALUE === true ? document.getElementsByClassName(st.button)[0].disabled = false : document.getElementsByClassName(st.button)[0].setAttribute('disabled','disabled');
+      }
       this.renderAddComment();
-      this.props.store.subscribe(this.renderAddComment)
+      this.props.store.subscribe(this.renderAddComment);
+      this.props.store.subscribe(status)
     }
 }
 
