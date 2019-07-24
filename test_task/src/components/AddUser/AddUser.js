@@ -22,7 +22,7 @@ class AddUser extends  Component{
       
     }
     componentWillMount(){
-    console.log('this.props.ADD_NAME_VALUE', this.props.state);
+    // console.log('this.props.ADD_NAME_VALUE', this.props.state);
       
     }
     newNameValue = (e) =>{

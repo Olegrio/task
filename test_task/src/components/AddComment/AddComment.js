@@ -52,7 +52,7 @@ class AddComment extends Component{
       this.props.addComment("ADD_NEW_COMMENT",this.props.user_id);
       
       
-      console.log('addComment',this.props.state);
+      // console.log('addComment',this.props.state);
     }
     renderAddComment = () => {
         

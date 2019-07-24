@@ -18,7 +18,7 @@ class UserList extends Component{
     }
     componentWillMount(){
 
-        console.log('UserList',this.props.NEW_USER);
+        // console.log('UserList',this.props.NEW_USER);
         
     
     }
