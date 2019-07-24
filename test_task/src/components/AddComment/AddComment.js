@@ -19,28 +19,35 @@ class AddComment extends Component{
     componentWillMount(){
       
     }
+
     componentDidMount(){
       
         const titleValue = this.newTitle.current.textContent;
         const commentValue = this.newComment.current.textContent;
         const phoneValue = this.newPhone.current.textContent;
     }
+
     onTitleValue = (e) => {
       let newTitleElem =e.target.value;   
       this.props.addValue("ADD_TITLE_VALUE",newTitleElem);
      }
+
      onCommentValue = (e) => {
       let newCommentElem =e.target.value;   
       this.props.addValue("ADD_COMMENT_VALUE",newCommentElem);
      }
+
      onPhoneValue = (e) => {
       let newPhoneElem =e.target.value;   
       this.props.addValue("ADD_PHONE_VALUE",newPhoneElem);
      }
+
     addComment = () => {
       
       this.props.addComment("ADD_NEW_COMMENT",this.props.user_id);
-      console.log(this.props.NEW_COMMENT_VALUE);
+      
+      
+      console.log(this.props.state);
     }
     
    

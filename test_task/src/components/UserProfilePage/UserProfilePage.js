@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
 import OneUser from '../OneUser/OneUser';
@@ -6,6 +7,7 @@ import OneComment from '../OneComment/OneComment';
 import AddComment from '../AddComment/AddComment';
 import SlideView from '../Carousel/SlideView';
 import  st from './UserProfilePage.module.css';
+
 
 class UserProfilePage extends Component{
     constructor (props){
@@ -20,13 +22,18 @@ class UserProfilePage extends Component{
     this.USER_PROFILE = this.props.state.USER_PROFILE ;
 
     this.adress = this.props.state.USER_PROFILE[this.user_id].adress;
-    this.array_comment = this.props.COMMENT.filter(data=> Number(data.userId) ===this.user_id );
-    this.array_comment_component =  this.array_comment.map((data,key)=><OneComment state={data} key={key} /> );
+    // this.array_comment = this.props.COMMENT.filter(data=> Number(data.userId) ===this.user_id );
+    // this.array_comment_component =  this.array_comment.map((data,key)=><OneComment state={data} key={key} /> );
   
      
     }
     
-   
+   componentWillMount(){
+    
+
+    
+    
+   }
    
 
     render(){
@@ -42,7 +49,8 @@ class UserProfilePage extends Component{
                     </ul>
               </div>
               <div className={st.comments} user_id={ this.user_id}>
-             {this.array_comment_component}
+             {/* {this.array_comment_component} */}
+             <div id='comments'></div>
               <AddComment NEW_VALUE={this.props.NEW_VALUE} user_id={this.user_id } />
               </div>
               
@@ -51,6 +59,20 @@ class UserProfilePage extends Component{
             </div>
 
         )
+    }
+    componentDidMount(){
+        let renderComments = () => {
+            this.array_comment = this.props.COMMENT.filter(data=> Number(data.userId) ===this.user_id );
+            this.array_comment_component =  this.array_comment.map((data,key)=><OneComment state={data} key={key} /> );
+            ReactDOM.render(
+                <div>
+{this.array_comment_component}
+                </div>
+            , document.getElementById('comments'))
+            
+            };
+            renderComments();
+            this.props.store.subscribe(renderComments);
     }
 }
 

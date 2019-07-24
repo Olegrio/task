@@ -21,7 +21,7 @@ import AddUser from './components/AddUser/AddUser';
 class App extends Component {
   
   componentWillMount(){
-this.arrayRoute = this.props.AppState.USER_PROFILE.map((data,key)=> <Route exact key={key} path={"/user/"+data.id} render={ () =>  <UserProfilePage NEW_VALUE={this.props.AppState.NEW_VALUE}   state={this.props.AppState} id_user ={data.id}  /> }  />);
+this.arrayRoute = this.props.AppState.USER_PROFILE.map((data,key)=> <Route exact key={key} path={"/user/"+data.id} render={ () =>  <UserProfilePage NEW_VALUE={this.props.AppState.NEW_VALUE} store= {this.props.store}  state={this.props.AppState} id_user ={data.id}  /> }  />);
 console.log(this.props.AppState);
 
   }
